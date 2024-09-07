@@ -10,9 +10,9 @@ cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 })
 
-/*var resultado = window.confirm('Estas seguro?');
-if (resultado === true) {
-    window.alert('Okay, si estas seguro.');
-} else { 
-    window.alert('Pareces indeciso');
-}*/
+function modhtml(){
+    document.querySelector(".titgen").innerHTML = "Hace click en el boton de la categoria que te interesa"
+}
+document.querySelector(".titgen").addEventListener("click",()=>{
+    modhtml();
+})
