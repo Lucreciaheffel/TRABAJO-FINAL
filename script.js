@@ -16,3 +16,4 @@ function modhtml(){
 document.querySelector(".titgen").addEventListener("click",()=>{
     modhtml();
 })
+

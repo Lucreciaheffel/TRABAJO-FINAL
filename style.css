@@ -4,13 +4,14 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image:  url(./fotos/fondo\ 7.jpeg);
-    padding: 0 1.5em;
+    font-family: system-ui;
+    background-image: url(./fotos/fondo\ 7.jpeg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -21,6 +22,20 @@ header {
     align-items: center;
     text-transform: capitalize;
     text-shadow: 8px 4px 4px #d718a8;
+}
+
+main{
+    padding: 16px;
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(238, 173, 183, 0.866);
+    font-weight: bolder;
+    border: none;
+    padding: 1.2em .5em;
+    text-align: center;
+    grid-column: span 3;
 }
 
 .imglogo{
@@ -77,10 +92,6 @@ h1 h2 h3 {
     margin: 32px;
 }
 
-main{
-    padding: 16px;
-}
-
 .titulos{
     width: 100%;
     display: grid;
@@ -88,9 +99,6 @@ main{
     gap: 1em;
 }
 
-main{
-    padding: 8px;
-}
 
 .titgen{
     background-color: palevioletred;
@@ -150,19 +158,10 @@ main{
     overflow: hidden;
     transition: all 0.5s;
 }
+
 .boton:hover{
     text-decoration: none;
     transition: all 0.5s;
-}
-
-footer {
-    margin-top: auto;
-    background-color: rgba(236, 209, 213, 0.489);
-    font-weight: bolder;
-    padding: 1.2em .5em;
-    margin: 0;
-    text-align: center;
-    grid-column: span 3;
 }
 
 .fa-brands{
@@ -189,11 +188,9 @@ footer {
 }
 
 /* especiales paginas*/
-.cuerpo{
-    background-image: linear-gradient(rgba(242, 235, 235, 0.4), rgba(16, 16, 16, 0.4)), url(./fotos/fondo\ 1.jpeg);
+.center{
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: center;
 }
 
 .formulario{
@@ -206,12 +203,15 @@ footer {
 .formulario label{
     display: block;
 }
+
 .negrita{
     font-weight: bolder;
 }
+
 .formulario p {
     margin: 0;
 }
+
 .titge{
     background-color: palevioletred;
     color: rgb(54, 50, 50);
@@ -220,26 +220,65 @@ footer {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.tit{
+    background-color: palevioletred;
+    color: rgb(54, 50, 50);
+    padding: 1.2em .5em;
+    margin: 0;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .img{
     display: block;
     width: 60%;
     margin: auto;
 }
+
 .imgpages{
     display: block;
     width: 20%;
     margin: auto;
 }
+
+textarea{
+    background-color: pink;
+    border: 2px solid palevioletred;
+}
+
+select{
+    background-color: pink;
+    border: 2px solid palevioletred;
+}
+
+.range{
+    height: 20px;
+    width: 100%;
+    background-color: pink;
+    border: 2px solid palevioletred;
+    border-radius: 50px;
+    -webkit-appearance: none;
+}
+
 input{
     border: none;
     background: none;
 }
 
+input[type="checkbox"]{
+    accent-color: pink;
+}
+
+input[type="radio"]{
+    accent-color: pink;
+}
+
 .cen{
     display: flex;
     justify-content: center;
-
 }
+
 .block{
     display: flex;
     justify-content: center;
@@ -256,6 +295,7 @@ input{
     .oculto{
         display: none;
     }
+
     .abrirmenu{
         display: block;
         border: 0;
@@ -265,6 +305,7 @@ input{
         color: #ce4183;
         background-color: aqua;
     }
+
     .cerrarmenu {
         display: block;
         border: 0;
@@ -289,24 +330,24 @@ input{
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, -5);
     }
+
     .nav.visible {
         opacity: 1;
         visibility: visible;
     }
+
     .nav-list{
         flex-direction: column;
         align-items: end;
     }
+
     .nav-list li a {
         color: aliceblue;
     }
-}
 
+}
     
 @media (min-width:720px){
-    body{
-        background-image: linear-gradient(rgba(246, 243, 243, 0.853), rgba(16, 16, 16, 0.4)), url(./fotos/fondo\ 9.jpeg);
-        }
     .nav{
         color: #200e1b;
         background:#f3afe7;
@@ -316,13 +357,16 @@ input{
     .titulos{
         grid-template-columns: 1fr 1fr;
     }
+
     .formulario{
         grid-template-columns: 1fr 1fr;
     }
+
     .titgen{
         grid-column-start: 1;
         grid-column-end: 3;
     }
+
     .titge{
         grid-column-start: 1;
         grid-column-end: 3;
@@ -334,23 +378,19 @@ input{
     .titulos{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
     .formulario{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
     .titgen{
         grid-column-start: 1;
         grid-column-end: 4;
     }
+
     .titge{
         grid-column-start: 1;
         grid-column-end: 4;
     }
-    .cuerpo{
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    footer{
-        margin-top: auto;
-    }
+
 }

@@ -1,13 +1,3 @@
-/*let nom = prompt("Ingresa tu nombre");
-function saludo() {
-    if (nom) {
-        alert("Bienvenida/o " + nom);
-    }
-    else {
-        alert("Te llamaré NN");
-    }
-}
-saludo();*/
 alert("ESPERO QUE DISFRUTES DE LA PAGINA PERROS SALCHICHAS!");
 let nom;
 nom = prompt ("Ingresa tu nombre:")
